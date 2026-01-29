@@ -1,5 +1,7 @@
 .basket-wrapper {
     width: 350px;
     height: 1000px;
-    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
