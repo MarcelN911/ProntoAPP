@@ -6,43 +6,43 @@ let menu = {
             },
         "info": [
             {
-            "name": "",
+            "name": "Bandeja Paisa",
             "listLabel": "Beschreibung:",
-            "description": [""],
-            "price": 9.99,
+            "description": ["Reis, rote Bohnen, Hackfleisch, Chicharrón, Chorizo, Spiegelei, Avocado, Arepa, frittierte Kochbanane"],
+            "price": 15.99,
             "img": "./assets/img/.jpeg",
             },
             {
-            "name": "",
+            "name": "Arepa de Queso",
             "listLabel": "Beschreibung:",
-            "description": [""],
+            "description": ["Maismehl, weißer Käse (Mozzarella-Stil), Butter, Prise Salz, Milch"],
             "price": 8.99,
             "img": "./assets/img/.jpeg", 
             },
             {
-            "name": "",
+            "name": "Sancocho de Gallina",
             "listLabel": "Beschreibung:",
-            "description": [""],
+            "description": ["Suppenhuhn, Kochbananen, Yucca (Maniok), Kartoffeln, Maiskolben, Koriander, Zwiebeln, Knoblauch"],
             "price": 7.99,
             "img": "./assets/img/.jpeg",
             },
             {
-            "name": "",
+            "name": "Pechuga con Arroz",
             "listLabel": "Beschreibung:",
-            "description": [""],
+            "description": ["Zart gegrillte Hähnchenbrust, weißer Reis, frischer Beilagensalat, Avocado, gebratene Kochbananen-Scheiben"],
             "price": 10.49,
             "img": "./assets/img/.jpeg",
             },
             {
-            "name": "",
+            "name": "Patacones con Todo",
             "listLabel": "Beschreibung:",
-            "description": [""],
+            "description": ["große frittierte grüne Kochbananen-Scheiben, Rindfleisch, Hogao-Sauce, Guacamole, Käse, Koriander"],
             "price": 11.49,
             "img": "./assets/img/.jpeg",
             }
         ],
     },
-    
+
     "Burger": {
         "banner": 
             {
@@ -87,7 +87,7 @@ let menu = {
         ],
     },
 
-    "Pizza (30cm)": {
+    "Pizza": {
         "banner": 
             {
                 "banner-img": "./assets/img/Pizza.png",
