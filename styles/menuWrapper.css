@@ -1,0 +1,10 @@
+.menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 350px);
+}
+
+.hero-bg {
+    background-image: url(".assets/img/banner.jpg");
+    height: 200px;
+}
