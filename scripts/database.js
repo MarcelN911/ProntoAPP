@@ -138,6 +138,13 @@ let menu = {
             },
         "info": [
             {
+            "name": "Carbonara",
+            "listLabel": "Beschreibung:",
+            "description": ["Spaghetti", "Speck", "Eier", "Parmesan", "Pfeffer"],
+            "price": 11.49,
+            "img": "./assets/img/Pasta4.jpeg",
+            },
+            {
             "name": "Spaghetti Bolognese",
             "listLabel": "Beschreibung:",
             "description": ["Spaghetti", "Rinderhackfleisch", "Tomatensauce", "Parmesan", "frisches Basilikum"],
@@ -157,13 +164,6 @@ let menu = {
             "description": ["Penne", "würzige Tomatensauce", "Knoblauch", "Chiliflocken", "Basilikum"],
             "price": 8.99,
             "img": "./assets/img/Pasta3.jpeg",
-            },
-            {
-            "name": "Carbonara",
-            "listLabel": "Beschreibung:",
-            "description": ["Spaghetti", "Speck", "Eier", "Parmesan", "Pfeffer"],
-            "price": 11.49,
-            "img": "./assets/img/Pasta4.jpeg",
             },
             {
             "name": "Lasagne",
@@ -226,6 +226,13 @@ let menu = {
             },
         "info": [
             {
+            "name": "Saft",
+            "listLabel": "Beschreibung:",
+            "description": ["Orange", "Apfel", "Banane", "Erdbeere", "Mango", "Maracuja", "Beerenmix"],
+            "price": 2.99,
+            "img": "./assets/img/Getränk3.jpeg",
+            },
+            {
             "name": "Coca-Cola",
             "listLabel": "Beschreibung:",
             "description": ["Classic", "Zero", "Light"],
@@ -238,13 +245,6 @@ let menu = {
             "description": ["mit Kohlensäure", "ohne Kohlensäure"],
             "price": 1.99,
             "img": "./assets/img/Getränk2.jpeg",
-            },
-            {
-            "name": "Saft",
-            "listLabel": "Beschreibung:",
-            "description": ["Orange", "Apfel", "Banane", "Erdbeere", "Mango", "Maracuja", "Beerenmix"],
-            "price": 2.99,
-            "img": "./assets/img/Getränk3.jpeg",
             },
             {
             "name": "Bier",
