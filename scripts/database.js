@@ -8,37 +8,37 @@ let menu = {
             {
             "name": "Bandeja Paisa",
             "listLabel": "Beschreibung:",
-            "description": ["Reis, rote Bohnen, Hackfleisch, Chicharrón, Chorizo, Spiegelei, Avocado, Arepa, frittierte Kochbanane"],
+            "description": ["Reis", "rote Bohnen", "Hackfleisch", "Chicharrón", "Chorizo", "Spiegelei", "Avocado", "Arepa", "frittierte Kochbanane"],
             "price": 15.99,
-            "img": "./assets/img/.jpeg",
+            "img": "./assets/img/col1.jpeg",
             },
             {
             "name": "Arepa de Queso",
             "listLabel": "Beschreibung:",
-            "description": ["Maismehl, weißer Käse (Mozzarella-Stil), Butter, Prise Salz, Milch"],
+            "description": ["Maismehl", "Käse", "Butter", "Prise Salz, Milch"],
             "price": 8.99,
-            "img": "./assets/img/.jpeg", 
+            "img": "./assets/img/col2.jpeg", 
             },
             {
             "name": "Sancocho de Gallina",
             "listLabel": "Beschreibung:",
-            "description": ["Suppenhuhn, Kochbananen, Yucca (Maniok), Kartoffeln, Maiskolben, Koriander, Zwiebeln, Knoblauch"],
+            "description": ["Suppenhuhn", "Kochbananen", "Yucca", "Kartoffeln", "Maiskolben", "Koriander", "Zwiebeln", "Knoblauch"],
             "price": 7.99,
-            "img": "./assets/img/.jpeg",
+            "img": "./assets/img/col3.jpeg",
             },
             {
             "name": "Pechuga con Arroz",
             "listLabel": "Beschreibung:",
-            "description": ["Zart gegrillte Hähnchenbrust, weißer Reis, frischer Beilagensalat, Avocado, gebratene Kochbananen-Scheiben"],
+            "description": ["Zart gegrillte Hähnchenbrust", "weißer Reis", "frischer Beilagensalat", "Avocado", "gebratene Kochbananen-Scheiben"],
             "price": 10.49,
-            "img": "./assets/img/.jpeg",
+            "img": "./assets/img/col4.jpeg",
             },
             {
             "name": "Patacones con Todo",
             "listLabel": "Beschreibung:",
-            "description": ["große frittierte grüne Kochbananen-Scheiben, Rindfleisch, Hogao-Sauce, Guacamole, Käse, Koriander"],
+            "description": ["große frittierte grüne Kochbananen-Scheiben", "Rindfleisch", "Hogao-Sauce", "Guacamole", "Käse", "Koriander"],
             "price": 11.49,
-            "img": "./assets/img/.jpeg",
+            "img": "./assets/img/col5.jpeg",
             }
         ],
     },
@@ -219,7 +219,7 @@ let menu = {
         ],
     },
 
-    "Getränk": {
+    "Getränke": {
         "banner": 
             {
                 "banner-img": "./assets/img/Burger.png",
