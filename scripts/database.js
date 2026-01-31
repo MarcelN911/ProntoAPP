@@ -228,37 +228,42 @@ let menu = {
             {
             "name": "Saft",
             "listLabel": "Beschreibung:",
-            "description": ["Orange", "Apfel", "Banane", "Erdbeere", "Mango", "Maracuja", "Beerenmix"],
+            "description": ["frisch gepresst"],
             "price": 2.99,
             "img": "./assets/img/Getränk3.jpeg",
+            "variants": ["Orange", "Apfel", "Banane", "Erdbeere", "Mango", "Maracuja", "Beerenmix"]
             },
             {
             "name": "Coca-Cola",
             "listLabel": "Beschreibung:",
-            "description": ["Classic", "Zero", "Light"],
+            "description": ["kohlensäurehaltig"],
             "price": 2.49,
             "img": "./assets/img/Getränk1.jpeg",
+            "variants": ["Classic", "Zero", "Light"]
             },
             {
             "name": "Mineralwasser",
             "listLabel": "Beschreibung:",
-            "description": ["mit Kohlensäure", "ohne Kohlensäure"],
+            "description": ["erfrischend"],
             "price": 1.99,
             "img": "./assets/img/Getränk2.jpeg",
+            "variants": ["mit Kohlensäure", "ohne Kohlensäure"]
             },
             {
             "name": "Bier",
             "listLabel": "Beschreibung:",
-            "description": ["Pils", "Weizen", "Radler", "Alkoholfrei"],
+            "description": ["verschiedene Sorten"],
             "price": 3.49,
             "img": "./assets/img/Getränk4.jpeg",
+            "variants": ["Pils", "Weizen", "Radler", "Alkoholfrei"]
             },
             {
             "name": "Kaffee",
             "listLabel": "Beschreibung:",
-            "description": ["Espresso", "Cappuccino", "Latte Macchiato", "Americano"],
+            "description": ["heiß und aromatisch"],
             "price": 2.99,
             "img": "./assets/img/Getränk5.jpeg",
+            "variants": ["Espresso", "Cappuccino", "Latte Macchiato", "Americano"]
             }
         ]
     }

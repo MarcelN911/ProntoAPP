@@ -51,11 +51,73 @@
 
             <div class="basket-wrapper">
                 <h2>Warenkorb</h2>
+
+                <div class="delivery-switch">
+                    <button class="switch-btn active" id="delivery-btn" onclick="setDeliveryMode('delivery')">
+                        🚗 Lieferung
+                    </button>
+                    <button class="switch-btn" id="pickup-btn" onclick="setDeliveryMode('pickup')">
+                        🏪 Abholung
+                    </button>
+                </div>
+
                 <div id="basket-container" class="basket-container"></div>
-                </div> 
-            </div>
+
+                <div class="basket-summary">
+                    <div class="summary-row">
+                        <span>Zwischensumme:</span>
+                        <span id="subtotal-price">0,00 €</span>
+                    </div>
+                    <div class="summary-row">
+                        <span id="delivery-label">Lieferkosten:</span>
+                        <span id="delivery-price">5,00 €</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Gesamtpreis:</span>
+                        <span id="total-price">5,00 €</span>
+                    </div>
+                    <button class="order-btn" onclick="submitOrder()">Jetzt Bestellen</button>
+                </div>
+            </div> 
        </section>
     </main>
+
+    <div id="order-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>✅ Bestellung bestätigt!</h2>
+                <button class="modal-close" onclick="closeOrderModal()">✕</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-message">🚀 Dein Essen wird schon bald bei dir sein!</p>
+                <div class="modal-details">
+                    <div class="detail-row">
+                        <span>Liefermodus:</span>
+                        <span id="modal-delivery-mode">Lieferung</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Gesamtpreis:</span>
+                        <span id="modal-total-price">0,00 €</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" onclick="closeOrderModal()">Alles klar! 👍</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="variant-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="variant-title">Wähle eine Variante</h2>
+                <button class="modal-close" onclick="closeVariantModal()">✕</button>
+            </div>
+            <div class="modal-body">
+                <div id="variant-options" class="variant-options"></div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <nav>
