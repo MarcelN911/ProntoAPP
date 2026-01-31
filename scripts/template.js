@@ -1,6 +1,3 @@
-// Event-based menu item handling
-
-
 document.addEventListener("DOMContentLoaded", function() {
     setupBasketButtons();
     renderCategorys();
