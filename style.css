@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     max-width: 1440px;
     margin: 0 auto;
@@ -198,11 +202,17 @@ footer nav {
     font-size: 16px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 }
 
 .modal-btn:hover {
     background-color: #a63a2f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(193, 72, 69, 0.3);
+}
+
+.modal-btn:active {
+    transform: translateY(0);
 }
 
 .variant-options {
@@ -226,10 +236,180 @@ footer nav {
 .variant-btn:hover {
     border-color: #c14845;
     background-color: #fff5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(193, 72, 69, 0.15);
+}
+
+.variant-btn:active {
+    transform: translateY(0);
 }
 
 .variant-btn.selected {
     background-color: #c14845;
     color: white;
     border-color: #c14845;
+}
+
+/* Mobile Bottom Navigation */
+.mobile-bottom-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
+    padding: 12px 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.bottom-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-bar-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bottom-bar-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #c14845;
+}
+
+.bottom-bar-count {
+    font-size: 12px;
+    color: #999;
+}
+
+.bottom-bar-btn {
+    background-color: #c14845;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bottom-bar-btn:active {
+    background-color: #a63a2f;
+    transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .menu-wrapper {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .basket-wrapper {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding: 0;
+        gap: 0;
+        display: none;
+    }
+
+    .mobile-bottom-bar {
+        display: block;
+    }
+
+    header {
+        padding: 10px 0;
+    }
+
+    nav {
+        padding: 10px 15px;
+    }
+
+    nav img {
+        height: 30px;
+    }
+
+    .hero-bg {
+        min-height: 200px;
+        border-radius: 0;
+    }
+
+    .category-selection {
+        padding: 15px 10px;
+        gap: 8px;
+    }
+
+    .category-selection button {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .menu-card-large,
+    .menu-card {
+        border-radius: 12px;
+    }
+
+    .menu-img-large {
+        height: 150px;
+    }
+
+    .menu-img {
+        height: 120px;
+    }
+
+    .menu-card-row {
+        gap: 15px;
+    }
+
+    footer {
+        padding-bottom: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-selection {
+        padding: 10px 5px;
+        gap: 6px;
+    }
+
+    .category-selection button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .menu-card-info {
+        padding: 12px;
+    }
+
+    .menu-name {
+        font-size: 14px;
+    }
+
+    .menu-description {
+        font-size: 12px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    main {
+        padding-bottom: 20px;
+    }
+
+    footer nav {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 15px;
+}
 }

@@ -1,7 +1,7 @@
 .menu-main-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 50px;
 }
 
 .menu-wrapper {
@@ -15,27 +15,44 @@
 .item-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .category-selection {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 15px 0;
+    gap: 12px;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
 .category-selection button {
-    padding: 10px;
-    border-radius: 20px;
-    border-style: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: 2px solid #e0e0e0;
     cursor: pointer;
-    font-size: 16px;
-    background-color: rgb(235, 235, 235);
+    font-size: 15px;
+    font-weight: 500;
+    background-color: white;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .category-selection button:hover {
-    background-color: rgb(255, 255, 255);
+    background-color: #f5f5f5;
+    border-color: #c14845;
+    color: #c14845;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(193, 72, 69, 0.2);
+}
+
+.category-selection button:active {
+    background-color: #c14845;
+    color: white;
+    border-color: #c14845;
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(193, 72, 69, 0.3);
 }
 
 .category-headline {
@@ -43,7 +60,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px 0 10px 0;
     box-sizing: border-box;
     font-size: 30px;
 }
@@ -85,7 +101,7 @@
     width: 100%;
     height: 400px;
     object-fit: cover;
-    object-position: 20% 75%;
+    object-position: 50% 75%;
 }
 
 .menu-price-large {
@@ -135,7 +151,7 @@
     width: 100%;
     height: 300px;
     object-fit: cover;
-    object-position: 0% 100%;
+    object-position: 50% 100%;
 }
 
 .menu-card-info {
@@ -182,4 +198,170 @@
 .menu-info {
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+    .menu-wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-wrapper {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .category-headline {
+        font-size: 24px;
+        padding: 15px 0 8px 0;
+    }
+
+    .category-selection {
+        padding: 15px 10px;
+        gap: 8px;
+    }
+
+    .category-selection button {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .menu-card-large {
+        border-radius: 12px;
+    }
+
+    .menu-img-large {
+        height: 200px;
+    }
+
+    .menu-price-large {
+        font-size: 18px;
+        top: -190px;
+    }
+
+    .add-meal-large {
+        font-size: 18px;
+        top: -190px;
+    }
+
+    .menu-img {
+        height: 150px;
+        object-position: 50% 70%;
+    }
+
+    .menu-price {
+        font-size: 18px;
+        top: -140px;
+    }
+
+    .add-meal {
+        font-size: 18px;
+        top: -140px;
+    }
+
+    .menu-card-row {
+        gap: 15px;
+    }
+
+    .menu-card-info {
+        padding: 15px;
+    }
+
+    .menu-name {
+        font-size: 16px;
+    }
+
+    .menu-description {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    .item-container {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-wrapper {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .category-headline {
+        font-size: 20px;
+        padding: 10px 0 5px 0;
+    }
+
+    .category-selection {
+        padding: 10px 5px;
+        gap: 6px;
+    }
+
+    .category-selection button {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    .menu-card-large {
+        border-radius: 10px;
+    }
+
+    .menu-img-large {
+        height: 150px;
+    }
+
+    .menu-price-large {
+        font-size: 16px;
+        top: -140px;
+        padding: 3px 8px;
+    }
+
+    .add-meal-large {
+        font-size: 16px;
+        top: -140px;
+        padding: 3px 10px;
+    }
+
+    .menu-card-row {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .menu-card-row .menu-card {
+        flex: 1 1 auto;
+    }
+
+    .menu-img {
+        height: 120px;
+    }
+
+    .menu-price {
+        font-size: 16px;
+        top: -110px;
+        padding: 3px 8px;
+    }
+
+    .add-meal {
+        font-size: 16px;
+        top: -110px;
+        padding: 3px 10px;
+    }
+
+    .menu-card-info {
+        padding: 12px;
+    }
+
+    .menu-name {
+        font-size: 14px;
+    }
+
+    .menu-description {
+        font-size: 11px;
+        padding: 4px;
+    }
+
+    .item-container {
+        gap: 15px;
+    }
 }
