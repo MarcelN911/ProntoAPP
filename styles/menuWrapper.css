@@ -18,38 +18,6 @@
     gap: 30px;
 }
 
-.hero-bg {
-    background-image: url("../assets/img/banner.jpg");
-    background-size: cover;
-    min-height: 300px;
-    max-width: 1440px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-    box-sizing: border-box;
-    padding-bottom: 20px;
-    border-radius: 20px;
-    box-shadow: 0 5px 10px 0 rgba(100, 100, 100);
-}
-
-.hero-title {
-    background-color: white;
-    padding: 5px 10px;
-    margin: 0;
-    border-radius: 20px;
-    font-size: 40px;
-    font-weight: 700;
-}
-
-.restaurant-score {
-    background-color: white;
-    padding: 5px 10px;
-    margin: 0;
-    border-radius: 20px;
-}
-
 .category-selection {
     display: flex;
     justify-content: center;
@@ -63,6 +31,7 @@
     border-style: none;
     cursor: pointer;
     font-size: 16px;
+    background-color: rgb(235, 235, 235);
 }
 
 .category-selection button:hover {

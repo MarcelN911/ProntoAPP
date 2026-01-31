@@ -30,20 +30,53 @@ nav img {
     margin: 2px 0;
 }
 
+.hero-bg {
+    background-image: url("../assets/img/banner.jpg");
+    background-size: cover;
+    min-height: 300px;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px 0 rgba(100, 100, 100);
+}
+
+.hero-title {
+    background-color: rgb(235, 235, 235);
+    padding: 5px 20px;
+    margin: 0;
+    border-radius: 20px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.restaurant-score {
+    background-color: rgb(235, 235, 235);
+    padding: 5px 10px;
+    margin: 0;
+    border-radius: 20px;
+}
+
 footer {
     margin: 0 auto;
+    background-color: #f4f4f4;
 }
 
 footer nav {
     height: 100px;
     max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: flex-end;
     gap: 75px;
-    background-color: #f4f4f4;
 }
 
 .wrapper {

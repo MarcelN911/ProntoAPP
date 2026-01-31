@@ -263,3 +263,5 @@ let menu = {
         ]
     }
 }
+
+let basket = [];

@@ -17,19 +17,15 @@ document.addEventListener("DOMContentLoaded", function() {
     renderCategorys();
 });
 
-
-
-
 function renderMenuCards() {
         const mainContainer = document.getElementById("menu-main-container");
         mainContainer.innerHTML = "";
         const categorys = Object.keys(menu);
 
         categorys.forEach(category => {
-                // Überschrift für die Kategorie (optional)
+
                 mainContainer.innerHTML += `<h2 class="category-headline">${category}</h2>`;
 
-                // Container für die Karten dieser Kategorie
                 const itemsContainer = document.createElement("div");
                 itemsContainer.id = `items-container-${category}`;
                 itemsContainer.classList.add("item-container");
@@ -47,7 +43,7 @@ function renderMenuCards() {
                                         <div class="menu-name">${first.name}</div>
                                         <div class="menu-description">${first.description.join(', ')}</div>
                                         <div class="menu-price-large">${first.price} €</div>
-                                        <button class="add-meal-large">+</button>
+                                        <button class="add-meal-large" data-category="${category}" data-index="0">+</button>
                                     </div>
                                 </div>
                         `;
@@ -65,7 +61,7 @@ function renderMenuCards() {
                                             <div class="menu-name">${dish1.name}</div>
                                             <div class="menu-description">${dish1.description.join(', ')}</div>
                                             <div class="menu-price">${dish1.price} €</div>
-                                            <button class="add-meal">+</button>
+                                            <button class="add-meal" data-category="${category}" data-index="${i}">+</button>
                                         </div>
                                     </div>
                                     ${dish2 ? `
@@ -75,7 +71,7 @@ function renderMenuCards() {
                                             <div class="menu-name">${dish2.name}</div>
                                             <div class="menu-description">${dish2.description.join(', ')}</div>
                                             <div class="menu-price">${dish2.price} €</div>
-                                            <button class="add-meal">+</button>
+                                            <button class="add-meal" data-category="${category}" data-index="${i + 1}">+</button>
                                         </div>
                                     </div>
                                     ` : ''}
@@ -88,3 +84,89 @@ function renderMenuCards() {
 document.addEventListener("DOMContentLoaded", function() {
     renderMenuCards();
 });
+
+function setupBasketButtons() {
+    document.addEventListener("click", function(event) {
+        if (event.target.classList.contains("add-meal") || event.target.classList.contains("add-meal-large")) {
+            const category = event.target.getAttribute("data-category");
+            const dishIndex = event.target.dataset.index;
+            const dish = menu[category].info[dishIndex];
+            addToBasket(dish);
+        }
+    });
+}
+
+function addToBasket(dish) {
+    const existingItem = basket.find(item => item.name === dish.name);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        basket.push({
+            id: Date.now(),
+            name: dish.name,
+            price: dish.price,
+            img: dish.img,
+            quantity: 1
+        });
+    }
+
+    renderBasket();
+}
+
+function renderBasket() {
+    const basketContainer = document.getElementById("basket-container");
+    basketContainer.innerHTML = "";
+
+    basket.forEach(item => {
+        basketContainer.innerHTML += `
+            <div class="basket-item">
+                <div class="basket-item-content"> 
+                    <img src="${item.img}" class="basket-item-img" alt="${item.name}">
+                    <div class="basket-item-info">
+                        <div class="basket-item-name">${item.name}</div>
+                    
+                        <div class="basket-item-price">${item.price} €
+                            <div class="basket-item-quantity">
+                                <button class="basket-btn" onclick="${item.quantity > 1 ? `decreaseQuantity(${item.id})` : `removeFromBasket(${item.id})`}">
+                                    ${item.quantity > 1 ? '-' : '✕'}
+                                </button>
+                                <span>${item.quantity}</span>
+                                <button class="basket-btn" onclick="increaseQuantity(${item.id})">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+}
+
+function removeFromBasket(itemId) {
+    basket = basket.filter(item => item.id !== itemId);
+    renderBasket();
+}
+
+function increaseQuantity(itemId) {
+    const item = basket.find(item => item.id === itemId);
+    if (item) {
+        item.quantity += 1;
+        renderBasket();
+    }
+}
+
+function decreaseQuantity(itemId) {
+    const item = basket.find(item => item.id === itemId);
+    if (item && item.quantity > 1) {
+        item.quantity -= 1;
+        renderBasket();
+    } else {
+        removeFromBasket(itemId);
+    }
+}  
+
+document.addEventListener("DOMContentLoaded", function() {
+    setupBasketButtons();
+});
+
+
