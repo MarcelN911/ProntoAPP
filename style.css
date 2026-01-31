@@ -11,7 +11,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 20px 30px 20px;
 }
 
 nav img {
@@ -72,7 +72,7 @@ footer {
 }
 
 footer nav {
-    height: 100px;
+    height: 70px;
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
@@ -250,7 +250,6 @@ footer nav {
     border-color: #c14845;
 }
 
-/* Mobile Bottom Navigation */
 .mobile-bottom-bar {
     display: none;
     position: fixed;

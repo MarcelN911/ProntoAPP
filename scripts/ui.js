@@ -175,7 +175,8 @@ function renderBasketModal() {
     // Update Mobile summary
     const subtotal = basket.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     let deliveryCost = 0;
-    if (deliveryMode === "delivery") {
+    // Lieferkosten nur berechnen, wenn Warenkorb nicht leer ist
+    if (basket.length > 0 && deliveryMode === "delivery") {
         deliveryCost = subtotal >= 30 ? 0 : 3.99;
     }
     const total = subtotal + deliveryCost;

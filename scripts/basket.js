@@ -1,7 +1,5 @@
 // Basket Management Functions
 
-let basket = [];
-
 function addToBasket(dish) {
 
     const itemName = dish.variant ? `${dish.name} (${dish.variant})` : dish.name;
@@ -63,7 +61,8 @@ function updateBasketSummary() {
     const subtotal = basket.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     
     let deliveryCost = 0;
-    if (deliveryMode === "delivery") {
+    // Lieferkosten nur berechnen, wenn Warenkorb nicht leer ist
+    if (basket.length > 0 && deliveryMode === "delivery") {
         deliveryCost = subtotal >= 30 ? 0 : 3.99;
     }
     
