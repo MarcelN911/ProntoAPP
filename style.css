@@ -217,7 +217,7 @@ footer nav {
 
 .variant-options {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 10px;
 }
 
@@ -410,5 +410,6 @@ footer nav {
         flex-direction: column;
         flex-wrap: nowrap;
         gap: 15px;
+        height: 100px;
 }
 }

@@ -1,5 +1,3 @@
-// UI Rendering Functions
-
 function renderCategorys() {
     const categorysContent = document.getElementById("category-selection");
     categorysContent.innerHTML = "";

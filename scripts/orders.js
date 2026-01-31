@@ -1,5 +1,3 @@
-// Order Management Functions
-
 function submitOrder() {
     if (basket.length === 0) {
         alert("🛒 Dein Warenkorb ist noch leer!\n\nLass uns etwas Köstliches zusammenstellen, bevor du bestellst! 😋");

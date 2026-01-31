@@ -1,5 +1,3 @@
-// Delivery Mode Management
-
 let deliveryMode = "delivery";
 
 function setDeliveryMode(mode) {

@@ -1,5 +1,3 @@
-// Basket Management Functions
-
 function addToBasket(dish) {
 
     const itemName = dish.variant ? `${dish.name} (${dish.variant})` : dish.name;
