@@ -75,6 +75,7 @@ nav img {
     padding: 5px 20px;
     margin: 0;
     border-radius: 20px;
+    border-left: 4px solid #c14845;
     font-size: 40px;
     font-weight: 700;
 }
