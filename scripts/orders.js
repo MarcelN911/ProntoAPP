@@ -5,13 +5,17 @@ function submitOrder() {
     }
 
     const deliveryText = deliveryMode === "delivery" ? "🚗 Lieferung" : "📦 Abholung";
+    const modal = document.getElementById("order-modal");
     document.getElementById("modal-delivery-mode").textContent = deliveryText;
     document.getElementById("modal-total-price").textContent = document.getElementById("total-price").textContent;
-    document.getElementById("order-modal").classList.remove("hidden");
+    modal.classList.remove("hidden");
+    modal.removeAttribute("inert");
 }
 
 function closeOrderModal() {
-    document.getElementById("order-modal").classList.add("hidden");
+    const modal = document.getElementById("order-modal");
+    modal.classList.add("hidden");
+    modal.setAttribute("inert", "");
 
     basket = [];
     renderBasket();

@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pronto</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./styles/basic.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/menuWrapper.css">
     <link rel="stylesheet" href="./styles/basketWrapper.css">
 
-    <link rel="icon" href="./assets/img/favicon.png" type="image/png">
+    <link rel="icon" href="./assets/img/Logo2.svg" type="image/svg+xml">
 
     <script src="./scripts/database.js"></script>
     <script src="./script.js"></script>
@@ -25,12 +29,12 @@
 <body>
     <header>
         <nav>
-            <img src="./assets/img/Logo 01.svg">
-            <div class="burger_container">
+            <img src="./assets/img/Logo1.svg" alt="Pronto Restaurant Logo">
+            <button class="burger-menu-btn" aria-label="Navigation Menu" aria-expanded="false" aria-controls="nav-menu">
                 <div class="burger-menu"></div>
                 <div class="burger-menu"></div>
                 <div class="burger-menu"></div>
-            </div>
+            </button>
         </nav>
     </header>
 
@@ -39,8 +43,13 @@
             <div>
                 <h1 class="hero-title">PRONTO</h1>
             </div>
-            <div>
-                <p class="restaurant-score">★★★★☆ (4,5)</p>
+            <div class="restaurant-score">
+                <div class="rating-main">
+                    <div class="stars">★★★★☆</div>
+                    <div class="score">4,5</div>
+                </div>
+                <div class="divider"></div>
+                <div class="details"><strong>152</strong> Bewertungen</div>
             </div>
         </div>
 
@@ -56,10 +65,10 @@
                 <h2 class="basket-headline">Warenkorb</h2>
 
                 <div class="delivery-switch">
-                    <button class="switch-btn active" id="delivery-btn" onclick="setDeliveryMode('delivery')">
+                    <button class="switch-btn active" id="delivery-btn" onclick="setDeliveryMode('delivery')" aria-label="Lieferung auswählen" aria-pressed="true">
                         🚗 Lieferung
                     </button>
-                    <button class="switch-btn" id="pickup-btn" onclick="setDeliveryMode('pickup')">
+                    <button class="switch-btn" id="pickup-btn" onclick="setDeliveryMode('pickup')" aria-label="Abholung auswählen" aria-pressed="false">
                         🏪 Abholung
                     </button>
                 </div>
@@ -74,6 +83,10 @@
                     <div class="summary-row">
                         <span id="delivery-label">Lieferkosten:</span>
                         <span id="delivery-price">3,99 €</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>⏱️ Lieferzeit:</span>
+                        <span id="delivery-time">30-45 Min</span>
                     </div>
                     <div class="summary-row total">
                         <span>Gesamtpreis:</span>
@@ -95,38 +108,42 @@
         </div>
     </div>
 
-    <div id="basket-modal" class="modal hidden">
-        <div class="modal-content" style="max-height: 90vh; overflow-y: auto;">
+    <div id="basket-modal" class="modal hidden" inert>
+        <div class="modal-content">
             <div class="modal-header">
                 <h2>🛒 Warenkorb</h2>
-                <button class="modal-close" onclick="closeBasketModal()">✕</button>
+                <button class="modal-close" onclick="closeBasketModal()" aria-label="Warenkorb schließen">✕</button>
             </div>
             <div class="modal-body">
                 <div id="mobile-basket-container" class="basket-container"></div>
-                <div class="basket-summary" style="margin-top: 20px;">
-                    <div class="summary-row">
-                        <span>Zwischensumme:</span>
-                        <span id="mobile-subtotal-price">0,00 €</span>
-                    </div>
-                    <div class="summary-row">
-                        <span id="mobile-delivery-label">Lieferkosten:</span>
-                        <span id="mobile-delivery-price">5,00 €</span>
-                    </div>
-                    <div class="summary-row total">
-                        <span>Gesamtpreis:</span>
-                        <span id="mobile-order-total-price">5,00 €</span>
-                    </div>
-                    <button class="order-btn" onclick="submitOrder()">Jetzt Bestellen</button>
+            </div>
+            <div class="basket-summary">
+                <div class="summary-row">
+                    <span>Zwischensumme:</span>
+                    <span id="mobile-subtotal-price">0,00 €</span>
                 </div>
+                <div class="summary-row">
+                    <span id="mobile-delivery-label">Lieferkosten:</span>
+                    <span id="mobile-delivery-price">5,00 €</span>
+                </div>
+                <div class="summary-row">
+                    <span>⏱️ Lieferzeit:</span>
+                    <span id="mobile-delivery-time">30-45 Min</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Gesamtpreis:</span>
+                    <span id="mobile-order-total-price">5,00 €</span>
+                </div>
+                <button class="order-btn" onclick="submitOrder()">Jetzt Bestellen</button>
             </div>
         </div>
     </div>
 
-    <div id="order-modal" class="modal hidden">
+    <div id="order-modal" class="modal hidden" inert>
         <div class="modal-content">
             <div class="modal-header">
                 <h2>✅ Bestellung bestätigt!</h2>
-                <button class="modal-close" onclick="closeOrderModal()">✕</button>
+                <button class="modal-close" onclick="closeOrderModal()" aria-label="Dialog schließen">✕</button>
             </div>
             <div class="modal-body">
                 <p class="modal-message">🚀 Dein Essen wird schon bald bei dir sein!</p>
@@ -134,6 +151,10 @@
                     <div class="detail-row">
                         <span>Liefermodus:</span>
                         <span id="modal-delivery-mode">Lieferung</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>⏱️ Lieferzeit:</span>
+                        <span id="modal-delivery-time">30-45 Min</span>
                     </div>
                     <div class="detail-row">
                         <span>Gesamtpreis:</span>
@@ -147,11 +168,11 @@
         </div>
     </div>
 
-    <div id="variant-modal" class="modal hidden">
+    <div id="variant-modal" class="modal hidden" inert>
         <div class="modal-content">
             <div class="modal-header">
                 <h2 id="variant-title">Wähle eine Variante</h2>
-                <button class="modal-close" onclick="closeVariantModal()">✕</button>
+                <button class="modal-close" onclick="closeVariantModal()" aria-label="Modal schließen">✕</button>
             </div>
             <div class="modal-body">
                 <div id="variant-options" class="variant-options"></div>
