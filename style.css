@@ -55,7 +55,7 @@ nav img {
 }
 
 .hero-bg {
-    background-image: url("../assets/img/banner.webp");
+    background-image: url("./assets/img/banner.webp");
     background-size: cover;
     min-height: 300px;
     max-width: 1440px;
