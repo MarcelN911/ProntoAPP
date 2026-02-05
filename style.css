@@ -248,6 +248,7 @@ footer nav {
 .modal-message {
     text-align: center;
     font-size: 16px;
+    margin-top: 20px;
     margin-bottom: 20px;
     color: #333;
 }
@@ -499,7 +500,7 @@ footer nav {
         height: 100vh;
         border-radius: 0;
     }
-    
+
     .category-selection {
         padding: 10px 5px;
         gap: 6px;
