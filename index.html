@@ -18,12 +18,13 @@
 
     <script src="./scripts/database.js"></script>
     <script src="./script.js"></script>
+    <script src="./scripts/template.js"></script>
     <script src="./scripts/ui.js"></script>
     <script src="./scripts/basket.js"></script>
     <script src="./scripts/delivery.js"></script>
     <script src="./scripts/orders.js"></script>
     <script src="./scripts/variants.js"></script>
-    <script src="./scripts/template.js"></script>
+
 
 </head>
 <body>
@@ -84,7 +85,7 @@
                         <span id="delivery-label">Lieferkosten:</span>
                         <span id="delivery-price">3,99 €</span>
                     </div>
-                    <div class="summary-row">
+                    <div class="summary-row" id="delivery-time-row-desktop">
                         <span>⏱️ Lieferzeit:</span>
                         <span id="delivery-time">30-45 Min</span>
                     </div>
@@ -115,6 +116,10 @@
                 <button class="modal-close" onclick="closeBasketModal()" aria-label="Warenkorb schließen">✕</button>
             </div>
             <div class="modal-body">
+                <div class="delivery-switch">
+                    <button class="switch-btn active" id="mobile-delivery-btn" onclick="setDeliveryMode('delivery')" aria-label="Lieferung auswählen" aria-pressed="true">🚗 Lieferung</button>
+                    <button class="switch-btn" id="mobile-pickup-btn" onclick="setDeliveryMode('pickup')" aria-label="Abholung auswählen" aria-pressed="false">🏪 Abholung</button>
+                </div>
                 <div id="mobile-basket-container" class="basket-container"></div>
             </div>
             <div class="basket-summary">
@@ -126,7 +131,7 @@
                     <span id="mobile-delivery-label">Lieferkosten:</span>
                     <span id="mobile-delivery-price">5,00 €</span>
                 </div>
-                <div class="summary-row">
+                <div class="summary-row" id="delivery-time-row-mobile">
                     <span>⏱️ Lieferzeit:</span>
                     <span id="mobile-delivery-time">30-45 Min</span>
                 </div>
@@ -152,7 +157,7 @@
                         <span>Liefermodus:</span>
                         <span id="modal-delivery-mode">Lieferung</span>
                     </div>
-                    <div class="detail-row">
+                    <div class="detail-row" id="delivery-time-row">
                         <span>⏱️ Lieferzeit:</span>
                         <span id="modal-delivery-time">30-45 Min</span>
                     </div>

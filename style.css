@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.hidden {
+    display: none !important;
+}
+
 button:focus-visible, a:focus-visible {
     outline: 3px solid #c14845;
     outline-offset: 2px;
@@ -165,16 +169,16 @@ footer nav {
 }
 
 .modal-content {
-        background-color: rgb(235, 235, 235);
-    border-radius: 20px;
+    background-color: rgb(235, 235, 235);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     max-width: 500px;
-    width: 90%;
+    width: 100%;
     overflow: hidden;
     animation: slideIn 0.3s ease-out;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 70vh;
+    border-radius: 20px;
 }
 
 #basket-modal .modal-content {
@@ -485,7 +489,17 @@ footer nav {
     }
 }
 
+@media (max-width: 500px) {
+    
+}
+
 @media (max-width: 480px) {
+
+    .modal-content {
+        height: 100vh;
+        border-radius: 0;
+    }
+    
     .category-selection {
         padding: 10px 5px;
         gap: 6px;

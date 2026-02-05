@@ -83,6 +83,13 @@
     font-size: 30px;
 }
 
+.category-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
 .menu-container {
     display: flex;
     flex-direction: column;
@@ -219,9 +226,28 @@
     flex-direction: column;
 }
 
-@media (max-width: 1200px) {
-    .menu-wrapper {
+@media (min-width: 769px) and (max-width: 900px) {
+    .menu-card-row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu-card-row .menu-card {
+        flex: 1 1 auto;
         width: 100%;
+    }
+
+    .menu-img-large {
+        height: 350px;
+    }
+
+    .menu-price-large {
+        top: -340px;
+    }
+
+    .add-meal-large {
+        top: -340px;
     }
 }
 

@@ -1,3 +1,14 @@
+
+const CATEGORY_ICONS = {
+    "Kolumbianisch": "🇨🇴",
+    "Burger": "🍔",
+    "Pizza": "🍕",
+    "Pasta": "🍝",
+    "Salat": "🥗",
+    "Getränke": "🥤"
+};
+
+
 let menu = {
     "Kolumbianisch": {
         "banner": 
@@ -97,13 +108,13 @@ let menu = {
             {
             "name": "Margherita",
             "listLabel": "Beschreibung:",
-            "description": ["Tomatensauce", "Mozzarella", "frisches Basilikum", "Olivenöl"],
+            "description": ["Tomatensauce", "Mozzarella", "frisches Basilikum", "Oliven\u00f6l"],
             "price": 10.99,
             "img": "./assets/img/Pizza1.webp",
             "sizes": {
                 "Klein (30cm)": 10.99,
                 "Mittel (35cm)": 13.99,
-                "Groß (40cm)": 16.99
+                "Gro\u00df (40cm)": 16.99
             }
             },
             {
@@ -115,7 +126,7 @@ let menu = {
             "sizes": {
                 "Klein (30cm)": 14.99,
                 "Mittel (35cm)": 17.99,
-                "Groß (40cm)": 20.99
+                "Gro\u00df (40cm)": 20.99
             }
             },
             {
@@ -127,7 +138,7 @@ let menu = {
             "sizes": {
                 "Klein (30cm)": 15.99,
                 "Mittel (35cm)": 18.99,
-                "Groß (40cm)": 21.99
+                "Gro\u00df (40cm)": 21.99
             }
             },
             {
@@ -139,7 +150,7 @@ let menu = {
             "sizes": {
                 "Klein (30cm)": 13.99,
                 "Mittel (35cm)": 16.99,
-                "Groß (40cm)": 19.99
+                "Gro\u00df (40cm)": 19.99
             }
             },
             {
@@ -151,7 +162,7 @@ let menu = {
             "sizes": {
                 "Klein (30cm)": 12.99,
                 "Mittel (35cm)": 15.99,
-                "Groß (40cm)": 18.99
+                "Gro\u00df (40cm)": 18.99
             }
             },
         ],

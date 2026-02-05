@@ -1,30 +1,32 @@
 let deliveryMode = "delivery";
 
+function updateButtonState(button, isActive) {
+    if (isActive) {
+        button.classList.add("active");
+        button.setAttribute("aria-pressed", "true");
+    } else {
+        button.classList.remove("active");
+        button.setAttribute("aria-pressed", "false");
+    }
+}
+
+
 function setDeliveryMode(mode) {
     deliveryMode = mode;
     
     const deliveryBtn = document.getElementById("delivery-btn");
     const pickupBtn = document.getElementById("pickup-btn");
+    const mobileDeliveryBtn = document.getElementById("mobile-delivery-btn");
+    const mobilePickupBtn = document.getElementById("mobile-pickup-btn");
     
-    deliveryBtn.classList.toggle("active", mode === "delivery");
-    deliveryBtn.setAttribute("aria-pressed", mode === "delivery");
-    
-    pickupBtn.classList.toggle("active", mode === "pickup");
-    pickupBtn.setAttribute("aria-pressed", mode === "pickup");
-    
-    const deliveryTimeElements = document.getElementById("delivery-time");
-    const mobileDeliveryTimeElement = document.getElementById("mobile-delivery-time");
-    const modalDeliveryTimeElement = document.getElementById("modal-delivery-time");
-    
-    if (deliveryTimeElements) {
-        deliveryTimeElements.parentElement.style.display = mode === "delivery" ? "flex" : "none";
+    updateButtonState(deliveryBtn, mode === "delivery");
+    updateButtonState(pickupBtn, mode === "pickup");
+    if (mobileDeliveryBtn) {
+        updateButtonState(mobileDeliveryBtn, mode === "delivery");
     }
-    if (mobileDeliveryTimeElement) {
-        mobileDeliveryTimeElement.parentElement.style.display = mode === "delivery" ? "flex" : "none";
+    if (mobilePickupBtn) {
+        updateButtonState(mobilePickupBtn, mode === "pickup");
     }
-    if (modalDeliveryTimeElement) {
-        modalDeliveryTimeElement.parentElement.style.display = mode === "delivery" ? "flex" : "none";
-    }
-    
     updateBasketSummary();
 }
+
