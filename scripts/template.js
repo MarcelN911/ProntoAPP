@@ -7,7 +7,7 @@ function createMenuCardLargeTemplate(dish, category) {
                 <div class="menu-name">${dish.name}</div>
                 <div class="menu-description">${dish.description.join(', ')}</div>
                 <div class="menu-price-large">${priceDisplay}</div>
-                <button class="add-meal-large" data-category="${category}" data-index="0">+</button>
+                <button class="add-meal-large" onclick="handleAddButtonClick(this)" data-category="${category}" data-index="0">+</button>
             </div>
         </div>
     `;
@@ -23,7 +23,7 @@ function createMenuCardTemplate(dish, category, index) {
                 <div class="menu-name">${dish.name}</div>
                 <div class="menu-description">${dish.description.join(', ')}</div>
                 <div class="menu-price">${priceDisplay}</div>
-                <button class="add-meal" data-category="${category}" data-index="${index}">+</button>
+                <button class="add-meal" onclick="handleAddButtonClick(this)" data-category="${category}" data-index="${index}">+</button>
             </div>
         </div>
     `;

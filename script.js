@@ -19,11 +19,11 @@ function hideModal(modal) {
 
 
 function setupModalClickHandler(modal, closeFunction) {
-    modal.addEventListener("click", function(event) {
+    modal.onclick = function(event) {
         if (event.target === modal) {
             closeFunction();
         }
-    });
+    };
 }
 
 
@@ -54,10 +54,10 @@ function createCategoryButton(category) {
     button.classList.add("category-btn");
     const icon = CATEGORY_ICONS[category] || "📌";
     button.textContent = `${icon} ${category}`;
-    button.addEventListener("click", function() {
+    button.onclick = function() {
         const id = `category-headline-${category}`;
         document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-    });
+    };
     return button;
 }
 
@@ -235,12 +235,7 @@ function openSizeModal(dishName, sizes, category, dishIndex) {
 
 
 function setupBasketButtons() {
-    document.addEventListener("click", function(event) {
-        const isAddBtn = event.target.classList.contains("add-meal");
-        const isAddLargeBtn = event.target.classList.contains("add-meal-large");
-        if (!isAddBtn && !isAddLargeBtn) return;
-        handleAddButtonClick(event.target);
-    });
+    // Buttons now have onclick="handleAddButtonClick(this)" in HTML templates
 }
 
 
@@ -259,11 +254,11 @@ function handleAddButtonClick(btn) {
 
 
 function setupKeyboardShortcuts() {
-    document.addEventListener("keydown", function(event) {
+    document.onkeydown = function(event) {
         if (event.key === "Escape") {
             closeModalsOnEscape();
         }
-    });
+    };
 }
 
 
