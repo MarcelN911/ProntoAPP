@@ -41,7 +41,6 @@ function setupModalBackgroundClose() {
 document.addEventListener("DOMContentLoaded", function() {
     renderCategories();
     renderAllMenuCards();
-    setupBasketButtons();
     setupKeyboardShortcuts();
     setupModalBackgroundClose();
     renderBasket();
@@ -231,11 +230,6 @@ function openSizeModal(dishName, sizes, category, dishIndex) {
     const options = document.getElementById("variant-options");
     const buttons = renderModalOptions(options, sizes, true, category, dishIndex, 0);
     setupModalDisplay(modal, buttons);
-}
-
-
-function setupBasketButtons() {
-    // Buttons now have onclick="handleAddButtonClick(this)" in HTML templates
 }
 
 
