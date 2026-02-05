@@ -154,6 +154,7 @@ function updateBasketSummary() {
     
     updateDeliveryTimeDisplay();
     updateMobileBar();
+    updateBasketModalPrices();
 }
 
 

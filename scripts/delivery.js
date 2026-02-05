@@ -11,22 +11,30 @@ function updateButtonState(button, isActive) {
 }
 
 
-function setDeliveryMode(mode) {
-    deliveryMode = mode;
-    
+function updateDeliveryButtons(mode) {
     const deliveryBtn = document.getElementById("delivery-btn");
     const pickupBtn = document.getElementById("pickup-btn");
-    const mobileDeliveryBtn = document.getElementById("mobile-delivery-btn");
-    const mobilePickupBtn = document.getElementById("mobile-pickup-btn");
-    
     updateButtonState(deliveryBtn, mode === "delivery");
     updateButtonState(pickupBtn, mode === "pickup");
+}
+
+
+function updateMobileDeliveryButtons(mode) {
+    const mobileDeliveryBtn = document.getElementById("mobile-delivery-btn");
+    const mobilePickupBtn = document.getElementById("mobile-pickup-btn");
     if (mobileDeliveryBtn) {
         updateButtonState(mobileDeliveryBtn, mode === "delivery");
     }
     if (mobilePickupBtn) {
         updateButtonState(mobilePickupBtn, mode === "pickup");
     }
+}
+
+
+function setDeliveryMode(mode) {
+    deliveryMode = mode;
+    updateDeliveryButtons(mode);
+    updateMobileDeliveryButtons(mode);
     updateBasketSummary();
 }
 
