@@ -14,6 +14,7 @@ Eine voll funktionsfähige Web-Applikation für einen Lieferdienst, die den komp
 📖 Über das Projekt <br><br>
 <br>
 Dieses Projekt fokussiert sich auf die Umsetzung einer komplexen E-Commerce-Logik. Ziel war es, eine dynamische Benutzeroberfläche zu schaffen, die flüssig auf Benutzereingaben reagiert, den Warenkorb in Echtzeit berechnet. <br><br>
+
 🛠 Tech-Stack <br>
 
 Frontend: HTML5, CSS3, JavaScript (ES6+)
@@ -22,10 +23,9 @@ Datenmanagement: JSON-basierte Datenstrukturen
 
 Speicherung: Local Storage für die Persistenz des Warenkorbs
 
-Konzept: Dynamisches Rendering, Array-Methoden (map, filter), Responsive Design
+Konzept: Dynamisches Rendering, Array-Methoden (map, filter), Responsive Design <br><br>
 
-
-⚡ Key-Features <br><br>
+⚡ Key-Features <br>
 
 Dynamisches Menü: Die Speisekarte wird basierend auf Datenobjekten automatisch generiert und gerendert.
 
@@ -33,19 +33,18 @@ Intelligenter Warenkorb: Hinzufügen, Entfernen und Anpassen der Anzahl von Arti
 
 Bestellvorgang: Interaktiver Checkout mit Bestätigungs-Overlay (Modal).
 
-Responsive Layout: Nahtlose Bedienung auf Smartphones und Desktop.
+Responsive Layout: Nahtlose Bedienung auf Smartphones und Desktop.<br><br>
 
 
-🎨 Design & User Experience <br><br>
+🎨 Design & User Experience <br>
 
 Frei gewähltes Design: Das visuelle Konzept und das Branding ("Pronto") wurden von mir eigenständig entworfen.
 
 Clean UI: Fokus auf eine intuitive Benutzerführung und klare Call-to-Action-Elemente.
 
-Interaktive Komponenten: Hover-Effekte, Modals und dynamische Warenkorb-Updates für ein modernes App-Gefühl.
+Interaktive Komponenten: Hover-Effekte, Modals und dynamische Warenkorb-Updates für ein modernes App-Gefühl.<br><br>
 
-
-💡 Was ich bei diesem Projekt gelernt habe <br><br>
+💡 Was ich bei diesem Projekt gelernt habe <br>
 
 CRUD-Logik: Effektives Verwalten von Daten innerhalb des Warenkorbs (Create, Read, Update, Delete).
 
