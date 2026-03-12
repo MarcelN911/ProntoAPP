@@ -1,4 +1,4 @@
-🍕 Pronto - Food Delivery App
+🍕 Pronto - Food Delivery App <br>
 Eine voll funktionsfähige Web-Applikation für einen Lieferdienst, die den kompletten Prozess von der Menüauswahl bis zur Bestellung simuliert.
 
 <br>
