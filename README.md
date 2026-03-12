@@ -11,7 +11,7 @@ Eine voll funktionsfähige Web-Applikation für einen Lieferdienst, die den komp
 </div>
 <br> 
 
-📖 Über das Projekt <br>
+📖 Über das Projekt <br><br>
 <br>
 Dieses Projekt fokussiert sich auf die Umsetzung einer komplexen E-Commerce-Logik. Ziel war es, eine dynamische Benutzeroberfläche zu schaffen, die flüssig auf Benutzereingaben reagiert, den Warenkorb in Echtzeit berechnet. <br><br>
 🛠 Tech-Stack <br>
@@ -25,7 +25,7 @@ Speicherung: Local Storage für die Persistenz des Warenkorbs
 Konzept: Dynamisches Rendering, Array-Methoden (map, filter), Responsive Design
 
 
-⚡ Key-Features <br>
+⚡ Key-Features <br><br>
 
 Dynamisches Menü: Die Speisekarte wird basierend auf Datenobjekten automatisch generiert und gerendert.
 
@@ -36,7 +36,7 @@ Bestellvorgang: Interaktiver Checkout mit Bestätigungs-Overlay (Modal).
 Responsive Layout: Nahtlose Bedienung auf Smartphones und Desktop.
 
 
-🎨 Design & User Experience <br>
+🎨 Design & User Experience <br><br>
 
 Frei gewähltes Design: Das visuelle Konzept und das Branding ("Pronto") wurden von mir eigenständig entworfen.
 
@@ -45,7 +45,7 @@ Clean UI: Fokus auf eine intuitive Benutzerführung und klare Call-to-Action-Ele
 Interaktive Komponenten: Hover-Effekte, Modals und dynamische Warenkorb-Updates für ein modernes App-Gefühl.
 
 
-💡 Was ich bei diesem Projekt gelernt habe <br>
+💡 Was ich bei diesem Projekt gelernt habe <br><br>
 
 CRUD-Logik: Effektives Verwalten von Daten innerhalb des Warenkorbs (Create, Read, Update, Delete).
 
