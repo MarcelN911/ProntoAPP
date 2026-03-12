@@ -13,9 +13,7 @@ Eine voll funktionsfähige Web-Applikation für einen Lieferdienst, die den komp
 
 📖 Über das Projekt <br>
 <br>
-Dieses Projekt fokussiert sich auf die Umsetzung einer komplexen E-Commerce-Logik. Ziel war es, eine dynamische Benutzeroberfläche zu schaffen, die flüssig auf Benutzereingaben reagiert, den Warenkorb in Echtzeit berechnet.
-
-
+Dieses Projekt fokussiert sich auf die Umsetzung einer komplexen E-Commerce-Logik. Ziel war es, eine dynamische Benutzeroberfläche zu schaffen, die flüssig auf Benutzereingaben reagiert, den Warenkorb in Echtzeit berechnet. <br><br>
 🛠 Tech-Stack <br>
 
 Frontend: HTML5, CSS3, JavaScript (ES6+)
