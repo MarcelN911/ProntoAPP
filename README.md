@@ -1,51 +1,57 @@
-🍕 Pronto - Food Delivery App 
-<br>
-<br>
-Eine voll funktionsfähige Web-Applikation für einen Lieferdienst, die den kompletten Prozess von der Menüauswahl bis zur Bestellung simuliert.
+# 🍕 Pronto — Food Delivery App
 
-<br>
-<div align="center">
-<a href="https://marcel-neumann.developerakademie.net/ProntoAPP/index.html">
-<img src="https://img.shields.io/badge/LIVE%20DEMO-BESUCHEN-brightgreen?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo">
-</a>
-</div>
-<br> 
+A fully functional food delivery web app that simulates the complete ordering flow — from browsing the menu to checkout. Built with vanilla JavaScript, no frameworks.
 
-📖 Über das Projekt <br>
+[![Live Demo](https://img.shields.io/badge/LIVE%20DEMO-Visit-brightgreen?style=for-the-badge&logo=googlechrome&logoColor=white)](https://marcel-neumann.developerakademie.net/ProntoAPP/index.html)
 
-Dieses Projekt fokussiert sich auf die Umsetzung einer komplexen E-Commerce-Logik. Ziel war es, eine dynamische Benutzeroberfläche zu schaffen, die flüssig auf Benutzereingaben reagiert, den Warenkorb in Echtzeit berechnet. <br><br>
+---
 
-🛠 Tech-Stack <br>
+## ⚡ Features
 
-Frontend: HTML5, CSS3, JavaScript (ES6+)
+- **Dynamic menu** — Dishes are rendered from data objects, not hardcoded HTML
+- **Smart cart** — Add, remove and adjust quantities with real-time price calculation (subtotal, delivery fees, total)
+- **Checkout flow** — Interactive order confirmation with modal overlay
+- **Persistent data** — Cart state saved to Local Storage, survives page reloads
+- **Responsive** — Works seamlessly on mobile and desktop
 
-Datenmanagement: JSON-basierte Datenstrukturen
+---
 
-Speicherung: Local Storage für die Persistenz des Warenkorbs
+## 🛠 Tech Stack
 
-Konzept: Dynamisches Rendering, Array-Methoden (map, filter), Responsive Design <br><br>
+| Area | Technology |
+|------|-----------|
+| Structure | HTML5 |
+| Styling | CSS3 (custom design & branding) |
+| Logic | JavaScript (ES6+) |
+| Storage | Local Storage (cart persistence) |
+| Concepts | CRUD operations, Array methods (map, filter), DOM rendering |
 
-⚡ Key-Features <br>
+---
 
-Dynamisches Menü: Die Speisekarte wird basierend auf Datenobjekten automatisch generiert und gerendert.
+## 🚀 Getting Started
 
-Intelligenter Warenkorb: Hinzufügen, Entfernen und Anpassen der Anzahl von Artikeln mit automatischer Neuberechnung von Zwischensumme, Lieferkosten und Gesamtpreis.
+```bash
+# Clone the repo
+git clone https://github.com/MarcelN911/ProntoAPP.git
 
-Bestellvorgang: Interaktiver Checkout mit Bestätigungs-Overlay (Modal).
+# Open in browser
+cd ProntoAPP
+open index.html
+```
 
-Responsive Layout: Nahtlose Bedienung auf Smartphones und Desktop.<br><br>
+No build tools or dependencies required — it's pure HTML, CSS and JavaScript.
 
+---
 
-🎨 Design & User Experience <br>
+## 💡 What I Learned
 
-Frei gewähltes Design: Das visuelle Konzept und das Branding ("Pronto") wurden von mir eigenständig entworfen.
+- Implementing full CRUD logic for a shopping cart (Create, Read, Update, Delete)
+- Managing application state and keeping the UI in sync with data changes
+- Working with Local Storage for client-side data persistence
+- Designing a clean, branded UI with clear call-to-action elements
 
-Clean UI: Fokus auf eine intuitive Benutzerführung und klare Call-to-Action-Elemente.
+---
 
-Interaktive Komponenten: Hover-Effekte, Modals und dynamische Warenkorb-Updates für ein modernes App-Gefühl.<br><br>
+## 📄 License
 
-💡 Was ich bei diesem Projekt gelernt habe <br>
-
-CRUD-Logik: Effektives Verwalten von Daten innerhalb des Warenkorbs (Create, Read, Update, Delete).
-
-Zustandsmanagement: Sicherstellung, dass die UI immer den aktuellen Stand des Warenkorbs widerspiegelt.
+This project is open source and available for learning purposes.
